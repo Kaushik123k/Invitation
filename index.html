@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="ta">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f3df">
+  <meta name="description" content="ஜெயம் இல்லம் கிரகப்பிரவேச விழாவிற்கு அன்புடன் அழைக்கிறோம். நவம்பர் 13, 2026 — பூளவாடி.">
+  <title>ஜெயம் இல்லம் · கிரகப்பிரவேசம்</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@400;500;600;700;800&family=Noto+Serif+Tamil:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--green:#123f27;--deep:#092d1a;--gold:#b48628;--red:#8f1e21;--paper:#fffdf3;--cream:#f7f1dd}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;color:var(--green);font-family:"Noto Serif Tamil",serif;background:var(--cream)}
+    .scene{min-height:100vh;position:relative;overflow:hidden;padding:26px 18px 50px;background:radial-gradient(ellipse at 50% 36%,rgba(255,255,255,.97),rgba(255,253,243,.96) 47%,rgba(245,235,201,.95) 100%)}
+    .scene:before,.scene:after{content:"";position:absolute;width:220px;height:400px;top:-85px;opacity:.95;pointer-events:none;background:repeating-linear-gradient(132deg,transparent 0 22px,rgba(226,226,172,.55) 23px 25px,transparent 26px 47px),radial-gradient(ellipse at 35% 48%,#80a843 0 12%,#3c6b2c 45%,#174626 72%,transparent 74%);filter:drop-shadow(1px 5px 5px #173a2522);border-radius:15% 90% 10% 90%;transform:rotate(-25deg)}
+    .scene:before{left:-120px}.scene:after{right:-125px;transform:scaleX(-1) rotate(-25deg)}
+    .flowers{position:absolute;right:-30px;top:155px;color:#fdfcf1;font-size:40px;line-height:1.4;text-shadow:0 2px 9px #8f9b58;opacity:.95;pointer-events:none}
+    .border{position:relative;z-index:1;max-width:780px;margin:auto;border:1px solid #c8a34c;padding:8px;background:#fffdf08a;box-shadow:0 22px 60px #51451d18}
+    .card{position:relative;border:1px solid #d2b45e;padding:35px clamp(18px,6vw,58px) 42px;text-align:center;background:linear-gradient(180deg,#fffef7ed,#fffdf3f5);overflow:hidden}
+    .card:before{content:"❧";position:absolute;left:-10px;top:44%;font-size:40px;color:#749b49;transform:rotate(90deg)}.card:after{content:"❧";position:absolute;right:-10px;top:44%;font-size:40px;color:#749b49;transform:rotate(-90deg)}
+    .ganesha{color:var(--gold);font-size:45px;line-height:1;margin-bottom:12px}
+    .ganesha img{width:48px;height:48px;object-fit:contain;display:block;margin:auto}
+    .invocation{color:var(--red);font-weight:800;font-size:clamp(18px,4vw,27px);margin:0 0 10px}
+    .rule{height:1px;max-width:390px;margin:15px auto;background:linear-gradient(90deg,transparent,var(--gold),transparent);position:relative}.rule:after{content:"✥";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:var(--paper);color:var(--gold);padding:0 10px;font-size:20px}
+    .roof{width:136px;height:98px;margin:7px auto 0;position:relative;overflow:hidden}.roof:before{display:none}.roof img{width:100%;height:100%;object-fit:cover;object-position:center 54%;display:block}
+    h1{font-size:clamp(39px,10vw,78px);line-height:1.25;margin:0;color:var(--deep);font-weight:800;letter-spacing:-.04em;text-shadow:0 2px #d9ce9c}
+    .subtitle{font-size:clamp(16px,3.7vw,22px);line-height:1.8;font-weight:700;margin:25px auto 22px;max-width:620px}
+    .nameplate{border:2px solid #b78c30;border-radius:32px 16px 32px 16px;background:linear-gradient(110deg,#fff0b6,#fff8dc,#ffecad);padding:9px 14px;margin:23px auto;max-width:570px;box-shadow:inset 0 0 0 4px #fff9e8,0 4px #dcc98c}
+    .nameplate strong{display:block;color:var(--deep);font-size:clamp(35px,8vw,58px);line-height:1.5}
+    .nameplate small{display:block;color:var(--gold);font-size:14px;letter-spacing:.12em}
+    .details{max-width:510px;margin:26px auto 16px;text-align:left}.detail{display:grid;grid-template-columns:62px 1fr;gap:14px;align-items:center;padding:15px 4px;border-bottom:1px solid #cba74a75}.detail:last-child{border-bottom:0}.icon{font-size:35px;text-align:center;color:var(--deep)}.icon svg{width:100%;height:100%;display:block}.detail-label{font-size:15px;color:#795d22;font-weight:700}.detail-value{font-size:clamp(20px,4.3vw,28px);font-weight:800;line-height:1.55}.detail-value small{font-size:17px}
+    .welcome{display:inline-block;background:var(--deep);color:#fff8d9;border:2px solid var(--gold);border-radius:999px;padding:8px 25px;margin:10px auto 8px;font-size:19px;font-weight:700;box-shadow:0 0 0 3px #fff8d9}
+    .hosts{font-size:clamp(18px,4vw,25px);font-weight:800;color:var(--red);line-height:1.75;margin:10px 0 0}.hosts span{display:block;color:var(--green)}
+    .actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:24px}.button{font:700 15px "Noto Serif Tamil",serif;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 17px;border-radius:999px;text-decoration:none;border:1px solid var(--gold);color:var(--deep);background:#fff9e4;transition:transform .2s,background .2s}.button:hover{transform:translateY(-2px);background:#f8edc5}.button.primary{background:var(--deep);color:#fff7d9}.foot{color:#88743a;font-size:13px;margin:26px 0 0}
+    @media(max-width:520px){.scene{padding:12px 9px 25px}.scene:before,.scene:after{width:130px;height:290px;opacity:.75}.scene:before{left:-89px}.scene:after{right:-90px}.card{padding:25px 14px 30px}.flowers{font-size:28px;right:-18px}.detail{grid-template-columns:48px 1fr;gap:8px}.icon{font-size:29px}.card:before,.card:after{font-size:28px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}}
+    /* Invitation motion: gentle petals, warm highlights, and a soft entrance. */
+    .petal-field{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:3}
+    .petal{position:absolute;top:-24px;width:11px;height:16px;border-radius:80% 10% 80% 10%;background:linear-gradient(145deg,#fffbe3,#d9ba67);opacity:0;box-shadow:0 1px 5px #9f762544;animation:petal-fall var(--fall-time) linear var(--delay) infinite}
+    .flowers{animation:flower-sway 6s ease-in-out infinite alternate;transform-origin:top center}
+    .border{animation:frame-arrive 1s cubic-bezier(.2,.8,.2,1) both}
+    .card{animation:card-glow 6s ease-in-out 1.2s infinite alternate}
+    .ganesha{animation:bless 3.5s ease-in-out infinite}
+    .invocation{animation:rise-in .8s .2s both}
+    h1{animation:title-arrive 1s .35s cubic-bezier(.18,.85,.24,1) both}
+    .rule{animation:rule-shimmer 4s ease-in-out infinite}
+    .nameplate{position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s}
+    .nameplate:after{content:"";position:absolute;top:-80%;left:-35%;width:24%;height:260%;transform:rotate(28deg);background:linear-gradient(90deg,transparent,#fff9d9bb,transparent);animation:plate-shine 5s ease-in-out 1.2s infinite}
+    .nameplate:hover{transform:translateY(-3px);box-shadow:inset 0 0 0 4px #fff9e8,0 7px #dcc98c,0 12px 24px #94772d22}
+    .detail{transition:transform .3s,background .3s}
+    .detail:hover{transform:translateX(5px);background:#fff8df66}
+    .icon{transition:transform .3s}
+    .detail:hover .icon{transform:scale(1.12) rotate(-6deg)}
+    .countdown{max-width:430px;margin:20px auto 2px;padding:10px 14px;border:1px solid #d1b55f;border-radius:18px;background:#fff9e4b8;color:#795d22;font-size:15px;font-weight:700}
+    .countdown b{color:var(--deep);font-size:19px}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.75,.2,1)}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    .invocation,h1,.nameplate strong,.cover-title{font-family:"Arima Madurai","Noto Serif Tamil",serif;font-weight:800;letter-spacing:normal}
+    h1{text-shadow:0 1px #cabc83,0 3px 12px #9c8a5222}
+    .invocation{font-weight:700}
+    .card .invocation{display:flex;align-items:center;justify-content:center;gap:9px;color:#a01d20}
+    .card .invocation .shri{display:inline;color:inherit;background:transparent;padding:0;font-family:"Noto Serif Tamil","Latha",serif;font-size:1em;font-weight:700;line-height:inherit;font-variant-ligatures:common-ligatures}
+    .nameplate strong{font-size:clamp(36px,8vw,60px);text-shadow:0 1px #f9efca}
+    .subtitle,.detail-value,.hosts{font-family:"Noto Serif Tamil",serif;font-feature-settings:"kern" 1}
+    @keyframes frame-arrive{from{opacity:0;transform:translateY(24px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+    @keyframes rise-in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes title-arrive{0%{opacity:0;transform:translateY(20px) scale(.96);letter-spacing:.02em}100%{opacity:1;transform:translateY(0) scale(1);letter-spacing:-.04em}}
+    @keyframes card-glow{from{box-shadow:inset 0 0 35px #e5d49a12}to{box-shadow:inset 0 0 55px #e5d49a55}}
+    @keyframes bless{0%,100%{transform:scale(1);text-shadow:0 0 0 #dfbf6370}50%{transform:scale(1.08);text-shadow:0 0 19px #dfbf6370}}
+    @keyframes rule-shimmer{0%,100%{opacity:.65}50%{opacity:1;filter:drop-shadow(0 0 4px #c89d3e)}}
+    @keyframes plate-shine{0%,58%{left:-35%}80%,100%{left:125%}}
+    @keyframes flower-sway{from{rotate:-5deg}to{rotate:5deg}}
+    @keyframes petal-fall{0%{opacity:0;transform:translate3d(0,-5vh,0) rotate(0)}10%{opacity:.72}85%{opacity:.55}100%{opacity:0;transform:translate3d(var(--drift),110vh,0) rotate(620deg)}}
+    @media(max-width:600px){
+      body{overflow-x:hidden}
+      .scene{min-height:100svh;padding:10px 8px calc(22px + env(safe-area-inset-bottom))}
+      .scene:before,.scene:after{width:120px;height:260px;top:-70px;opacity:.58}
+      .scene:before{left:-78px}.scene:after{right:-78px}
+      .flowers{right:-12px;top:135px;font-size:25px;opacity:.72}
+      .border{width:100%;max-width:470px;padding:5px}
+      .card{padding:22px 15px 25px}
+      .card:before,.card:after{font-size:25px;top:42%}
+      .ganesha{font-size:38px;margin-bottom:8px}
+      .ganesha img{width:42px;height:42px}
+      .invocation{font-size:clamp(17px,5vw,22px)}
+      .rule{max-width:290px;margin:12px auto}
+      .roof{transform:scale(.82);margin:8px auto -2px}
+      h1{font-size:clamp(29px,9.3vw,43px);line-height:1.42;letter-spacing:-.06em;overflow-wrap:anywhere}
+      .subtitle{font-size:clamp(14px,3.8vw,17px);line-height:1.75;margin:17px auto;max-width:440px}
+      .nameplate{border-radius:25px 13px;padding:7px 10px;margin:17px auto 19px}
+      .nameplate strong{font-size:clamp(29px,8vw,40px);line-height:1.45}
+      .nameplate small{font-size:12px}
+      .details{margin:18px auto 11px;max-width:420px}
+      .detail{grid-template-columns:42px minmax(0,1fr);gap:8px;padding:11px 3px}
+      .icon{font-size:27px}.detail-label{font-size:13px}
+      .detail-value{font-size:clamp(18px,5.1vw,23px);line-height:1.5;overflow-wrap:anywhere}
+      .detail-value small{font-size:15px}
+      .countdown{font-size:13px;padding:8px 10px;margin:13px auto 3px}
+      .countdown b{font-size:16px}
+      .welcome{font-size:16px;padding:7px 17px;margin:9px auto 6px}
+      .hosts{font-size:clamp(16px,4.8vw,21px);line-height:1.65}
+      .actions{display:grid;grid-template-columns:1fr;gap:9px;margin-top:19px}
+      .button{width:100%;min-height:48px;font-size:14px;padding:10px 14px}
+      .foot{font-size:12px;margin-top:18px}
+      .petal{width:8px;height:12px}
+    }
+    @media(max-width:360px){.card{padding-left:11px;padding-right:11px}.subtitle{font-size:13px}.detail{grid-template-columns:36px minmax(0,1fr);gap:7px}.icon{font-size:24px}.detail-value{font-size:17px}.detail-value small{font-size:14px}.card:before,.card:after{opacity:.5}}
+    .cover-screen{position:fixed;inset:0;z-index:20;display:grid;place-items:center;padding:20px;background:radial-gradient(ellipse at center,#1e5233,#082719 78%);color:#fff8df;text-align:center;transition:opacity .8s,visibility .8s}
+    .cover-screen:before,.cover-screen:after{content:"✿";position:absolute;color:#d7bc64;font-size:clamp(90px,18vw,200px);opacity:.13;pointer-events:none;animation:cover-drift 8s ease-in-out infinite alternate}
+    .cover-screen:before{left:-20px;top:-20px}.cover-screen:after{right:-20px;bottom:-30px;animation-delay:-3s}
+    .cover-card{position:relative;width:min(100%,440px);padding:34px 24px 30px;border:1px solid #d7b759;outline:1px solid #d7b759;outline-offset:6px;background:linear-gradient(155deg,#17432b,#0b2f1d);box-shadow:0 24px 80px #0005;animation:cover-arrive 1s both}
+    .cover-glyph{font-size:42px;color:#e1c36b;margin:8px auto 14px;animation:bless 3.5s ease-in-out infinite}
+    .cover-house{width:132px;height:82px;margin:10px auto 16px;position:relative}
+    .cover-house img{display:block;width:100%;height:100%;object-fit:contain}
+    .cover-kicker{font-size:15px;color:#e7d28c;margin:0 0 8px}
+    .cover-title{font-family:"Arima Madurai","Noto Serif Tamil",serif;font-weight:800;font-size:clamp(27px,7vw,40px);line-height:1.5;margin:0;color:#fff7d9}
+    .cover-subtitle{font-family:"Noto Serif Tamil",serif;font-size:18px;margin:0;color:#fff7d9}
+    .cover-line{height:1px;background:linear-gradient(90deg,transparent,#d7b759,transparent);margin:19px auto;max-width:250px}
+    .cover-hint{font-family:"Noto Serif Tamil",serif;font-size:15px;line-height:1.8;color:#efdfad;margin:15px 0 18px}
+    .cover-actions{display:grid;gap:11px;justify-items:center}
+    .cover-button{width:min(100%,290px);min-height:52px;border:1px solid #e1c36b;border-radius:999px;background:#f5e5a9;color:#153a24;font:700 16px "Noto Serif Tamil",serif;cursor:pointer;box-shadow:0 5px 0 #a67e2d;transition:transform .2s,box-shadow .2s}
+    .cover-button:hover{transform:translateY(-2px);box-shadow:0 7px 0 #a67e2d}
+    .lang-toggle{position:absolute;right:12px;top:12px;border:1px solid #c8a34c;border-radius:999px;background:#fff9e5;color:#173b25;padding:7px 12px;font:600 13px "Noto Serif Tamil",serif;cursor:pointer;z-index:2}
+    .cover-screen .lang-toggle{position:relative;right:auto;top:auto;background:#ffffff0d;color:#fff6d7;border-color:#d7b759;margin-top:6px}
+    .cover-screen.is-opening{opacity:0;visibility:hidden;transform:scale(1.04)}
+    .opening-scene{position:fixed;inset:0;z-index:30;display:grid;place-items:center;overflow:hidden;background:radial-gradient(ellipse at 50% 55%,#263c40 0,#101f29 48%,#08131d 100%);opacity:0;visibility:hidden;transition:opacity .65s,visibility .65s}
+    body.opening-active .opening-scene{opacity:1;visibility:visible}
+    .opening-scene.is-finished{opacity:0;visibility:hidden}
+    .opening-house{position:relative;width:min(82vw,620px);height:min(54vh,420px);min-height:270px;filter:drop-shadow(0 20px 35px #0008)}
+    .opening-roof{position:absolute;left:4%;top:0;width:92%;height:49%;clip-path:polygon(50% 0,100% 78%,96% 86%,50% 19%,4% 86%,0 78%);background:linear-gradient(115deg,#8e6827,#f5dc85 42%,#bd8d39 68%,#f7e59b);filter:drop-shadow(0 0 12px #d9b75455)}
+    .opening-building{position:absolute;left:9%;right:9%;bottom:7%;height:57%;display:grid;grid-template-columns:1fr .72fr 1fr;gap:3%;padding:12px 13px 0;border:2px solid #b8954b;border-bottom:5px solid #c6a45b;background:linear-gradient(180deg,#182832,#101e27);box-shadow:0 0 30px #d7b95b18}
+    .opening-window{position:relative;align-self:center;height:72%;border:2px solid #d0b66b;background:linear-gradient(90deg,transparent 48%,#bda75e 49% 51%,transparent 52%),linear-gradient(transparent 48%,#bda75e 49% 51%,transparent 52%),#1a2930;box-shadow:inset 0 0 0 3px #28363a;transition:background-color .6s,box-shadow .8s}
+    body.opening-active .opening-window{animation:window-warm .8s 1.35s both}
+    .opening-entry{position:relative;height:100%;border:2px solid #d5ba6a;background:#1a2930;overflow:visible;perspective:600px}
+    .opening-interior{position:absolute;inset:0;background:radial-gradient(ellipse at 55% 50%,#fff5cb,#f2ae4a 35%,#a9591c 73%,transparent);opacity:0;filter:blur(12px);transform:scale(1.5)}
+    body.opening-active .opening-interior{animation:interior-glow .9s 1.35s forwards}
+    .opening-door{position:absolute;inset:0;transform-origin:left center;border:1px solid #e4cc7a;background:linear-gradient(90deg,#483820,#17252a 45%,#101d25);box-shadow:inset 7px 0 10px #d0a65033;transform-style:preserve-3d}
+    body.opening-active .opening-door{animation:door-swing 1.25s 1.15s cubic-bezier(.2,.7,.2,1) forwards}
+    .opening-keyhole{position:absolute;z-index:2;left:50%;top:53%;width:12px;height:17px;transform:translate(-50%,-50%);background:#e4c365;clip-path:polygon(50% 0,100% 35%,73% 57%,65% 100%,35% 100%,27% 57%,0 35%)}
+    .opening-key{position:absolute;z-index:3;left:50%;top:53%;width:112px;height:42px;transform:translate(-50%,-50%);filter:drop-shadow(0 0 8px #f3d273aa)}
+    body.opening-active .opening-key{animation:key-turn .9s .45s cubic-bezier(.3,.8,.3,1) forwards}
+    .opening-light-wave{position:absolute;z-index:4;left:-48%;top:0;width:42%;height:100%;pointer-events:none;background:linear-gradient(90deg,transparent,#fff2bd77,#fff9dbcc,#f5ce6777,transparent);filter:blur(7px);opacity:0}
+    body.opening-active .opening-light-wave{animation:light-sweep 1.25s 1.45s ease-out forwards}
+    .opening-sparkles{position:absolute;inset:0;pointer-events:none}
+    .opening-sparkles i{position:absolute;width:5px;height:5px;border-radius:50%;background:#f7df91;box-shadow:0 0 12px 3px #e9bf5b88;opacity:0;animation:sparkle-rise 2.5s ease-out infinite}
+    .opening-sparkles i:nth-child(1){left:12%;top:70%;animation-delay:.2s}.opening-sparkles i:nth-child(2){left:24%;top:57%;animation-delay:.7s}.opening-sparkles i:nth-child(3){left:37%;top:77%;animation-delay:1.1s}.opening-sparkles i:nth-child(4){left:49%;top:62%;animation-delay:.4s}.opening-sparkles i:nth-child(5){left:62%;top:75%;animation-delay:1.4s}.opening-sparkles i:nth-child(6){left:74%;top:58%;animation-delay:.9s}.opening-sparkles i:nth-child(7){left:88%;top:71%;animation-delay:.5s}.opening-sparkles i:nth-child(8){left:18%;top:37%;animation-delay:1.6s}.opening-sparkles i:nth-child(9){left:81%;top:35%;animation-delay:1.2s}.opening-sparkles i:nth-child(10){left:55%;top:31%;animation-delay:.8s}
+    .scene{opacity:0;filter:blur(5px);transform:translateY(14px);transition:opacity .9s,filter .9s,transform .9s}
+    body.invite-open .scene{opacity:1;filter:none;transform:none}
+    body.invite-open .petal-field{z-index:4}
+    body:not(.invite-open){overflow:hidden}
+    .card>.lang-toggle{top:10px;right:10px}
+    @keyframes cover-arrive{from{opacity:0;transform:translateY(20px) scale(.96)}to{opacity:1;transform:translateY(0) scale(1)}}
+    @keyframes cover-drift{from{transform:rotate(-12deg) scale(.92)}to{transform:rotate(15deg) scale(1.08)}}
+    @keyframes key-turn{0%{transform:translate(-50%,-50%) rotate(0)}60%{transform:translate(-50%,-50%) rotate(72deg)}100%{transform:translate(-50%,-50%) rotate(72deg) translateX(18px);opacity:0}}
+    @keyframes door-swing{to{transform:rotateY(-72deg)}}
+    @keyframes interior-glow{to{opacity:.95}}
+    @keyframes window-warm{to{background-color:#f0ba55;box-shadow:0 0 26px 8px #efbd5a88,inset 0 0 20px #fff2bc}}
+    @keyframes light-sweep{0%{left:-48%;opacity:0}15%{opacity:1}100%{left:110%;opacity:0}}
+    @keyframes sparkle-rise{0%{opacity:0;transform:translateY(18px) scale(.5)}20%{opacity:.9}100%{opacity:0;transform:translateY(-90px) scale(1.3)}}
+    @media(max-width:600px){.opening-house{width:96vw;height:38vh;min-height:220px}.opening-building{left:5%;right:5%;padding:8px 8px 0}.opening-key{width:88px;height:34px}}
+    @media(prefers-reduced-motion:reduce){.opening-scene,.opening-key,.opening-door,.opening-interior,.opening-window,.opening-light-wave,.opening-sparkles i{animation:none!important;transition:none!important}.opening-scene{display:none}}
+    @media(max-width:600px){
+      html,body{height:100%;overflow:hidden}
+      .scene{height:100svh;min-height:0;width:100%;padding:4px;overflow:hidden;display:flex;align-items:stretch}
+      .border{height:100%;width:100%;max-width:470px;margin:auto;padding:3px;overflow:hidden}
+      .card{height:100%;width:100%;padding:7px 12px 9px;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center}
+      .card>.lang-toggle{top:5px;right:5px;transform:scale(.82);transform-origin:top right}
+      .ganesha{margin:0 0 2px;line-height:1}
+      .ganesha img{width:36px;height:36px}
+      .invocation{font-size:clamp(12px,3.5vw,15px);line-height:1.35;margin:0}
+      .rule{width:74%;height:1px;margin:5px auto}
+      .roof{width:128px;height:90px;margin:0 auto -2px;transform:none;flex:none}
+      .roof img{object-fit:cover;object-position:center 54%}
+      .card h1{font-size:clamp(23px,7.3vw,31px);line-height:1.22;letter-spacing:-.04em;margin:0}
+      .card .subtitle{font-size:clamp(11px,3.2vw,13px);line-height:1.45;margin:6px auto 7px;max-width:430px}
+      .nameplate{padding:3px 10px;margin:2px auto 5px;border-radius:20px 12px}
+      .nameplate small{font-size:9px;line-height:1.2}
+      .nameplate strong{font-size:clamp(21px,6.5vw,27px);line-height:1.25}
+      .details{width:min(100%,420px);margin:2px auto 3px}
+      .detail{grid-template-columns:34px minmax(0,1fr);gap:7px;padding:5px 2px}
+      .icon{width:28px;height:28px;font-size:21px}
+      .detail-label{font-size:10px;line-height:1.2}
+      .detail-value{font-size:clamp(14px,4.1vw,17px);line-height:1.25;overflow-wrap:anywhere}
+      .detail-value small{font-size:11px}
+      .countdown{display:none}
+      .welcome{font-size:12px;line-height:1.2;padding:5px 14px;margin:2px auto 1px}
+      .hosts{font-size:clamp(13px,4vw,16px);line-height:1.3;margin:2px 0 0}
+      .actions{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:7px}
+      .button{width:100%;min-height:40px;font-size:11px;line-height:1.25;padding:5px 7px;gap:4px}
+      .foot{display:none}
+      .card:before,.card:after{top:45%;font-size:20px;opacity:.5}
+    }
+    @media(max-width:600px) and (max-height:700px){
+      .card{padding-top:5px;padding-bottom:5px}
+      .ganesha img{width:30px;height:30px}
+      .invocation{font-size:11px}
+      .roof{width:112px;height:76px}
+      .card h1{font-size:23px}
+      .card .subtitle{font-size:10px;line-height:1.35;margin:3px auto 4px}
+      .nameplate strong{font-size:21px}
+      .detail{padding:3px 2px}
+      .icon{width:24px;height:24px}
+      .welcome{font-size:11px;padding:4px 12px}
+      .hosts{font-size:12px}
+      .button{min-height:35px;font-size:10px}
+      .actions{margin-top:5px}
+    }
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <div class="cover-screen" id="cover-screen">
+    <section class="cover-card" aria-label="Jayam Illam invitation cover">
+      <button class="lang-toggle" type="button" data-language-toggle>English</button>
+      <div class="cover-glyph" aria-hidden="true">ॐ</div>
+      <p class="cover-kicker" data-i18n="blessing">ஸ்ரீ அஜ்ஜியம்மன் துணை</p>
+      <div class="cover-house" aria-hidden="true"><img src="assets/house-transparent.png" alt=""></div>
+      <h1 class="cover-title">ஜெயம் இல்லம்</h1>
+      <p class="cover-subtitle">கிரகப்பிரவேசம் · Housewarming</p>
+      <div class="cover-line"></div>
+      <p class="cover-hint" data-i18n="tapHint">உங்கள் அன்பான வருகைக்காக காத்திருக்கிறோம்<br>We warmly await your presence</p>
+      <div class="cover-actions"><button class="cover-button" id="open-invitation" type="button" data-i18n="tapOpen">அழைப்பிதழை திறக்க · Tap to open</button></div>
+    </section>
+  </div>
+  <div class="opening-scene" id="opening-scene" aria-hidden="true">
+    <div class="opening-sparkles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="opening-house" aria-hidden="true">
+      <div class="opening-roof"></div>
+      <div class="opening-building">
+        <div class="opening-window"></div>
+        <div class="opening-entry"><div class="opening-interior"></div><div class="opening-door"></div><div class="opening-keyhole"></div>
+          <svg class="opening-key" viewBox="0 0 112 42" aria-hidden="true"><circle cx="18" cy="21" r="11" fill="none" stroke="#f1d476" stroke-width="5"/><path d="M29 21h72v8H88v8H77v-8H63v-8" fill="none" stroke="#f1d476" stroke-width="5" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="opening-window"></div>
+        <div class="opening-light-wave"></div>
+      </div>
+    </div>
+  </div>
+  <div class="petal-field" id="petal-field" aria-hidden="true"></div>
+  <main class="scene">
+    <div class="flowers" aria-hidden="true">✿<br>❀<br>✿<br>❀</div>
+    <div class="border"><article class="card">
+      <button class="lang-toggle" type="button" data-language-toggle>English</button>
+      <div class="ganesha" aria-hidden="true">ॐ</div>
+      <p class="invocation">ஸ்ரீ அஜ்ஜியம்மன் துணை</p>
+      <div class="rule"></div>
+      <div class="roof" aria-hidden="true"><img src="assets/house-transparent.png" alt=""></div>
+      <h1>கிரகப்பிரவேசம்</h1>
+      <p class="subtitle">இறைவன் அருளால் இனிதே தொடங்கும்<br>எங்கள் இல்ல விழாவில், தங்கள் அன்பு வருகையால்<br>அழகூட்டுமாறு அன்புடன் அழைக்கிறோம்.</p>
+      <div class="nameplate"><small>எங்கள் இல்லம்</small><strong>ஜெயம் இல்லம்</strong></div>
+      <section class="details reveal" aria-label="விழா விவரங்கள்">
+        <div class="detail"><div class="icon" aria-hidden="true">▦</div><div><div class="detail-label">நாள் & தேதி</div><div class="detail-value">வெள்ளிக்கிழமை<br><small>13 நவம்பர் 2026</small></div></div></div>
+        <div class="detail"><div class="icon" aria-hidden="true">⌖</div><div><div class="detail-label">இடம்</div><div class="detail-value">பூளவாடி</div></div></div>
+        <div class="detail"><div class="icon" aria-hidden="true">◷</div><div><div class="detail-label">நேரம்</div><div class="detail-value">மாலை 4.00 முதல்<br><small>6.00 மணி வரை</small></div></div></div>
+      </section>
+      <div class="countdown reveal" id="countdown" aria-live="polite">விழாவை எதிர்நோக்கி...</div>
+      <div class="welcome">தங்கள் நல்வரவை நாடும்</div>
+      <p class="hosts">சிவசுப்பிரமணியன் – ஜெயலட்சுமி<span>கௌசிக்</span></p>
+      <div class="actions">
+        <a class="button primary" id="map-link" href="https://maps.app.goo.gl/hpoiN9AnbbSE1QmFA" target="_blank" rel="noreferrer">⌖ வழி காண்க</a>
+        <button class="button" id="calendar">＋ நாட்காட்டியில் சேர்க்க</button>
+      </div>
+      <p class="foot">அன்புடன் வருக · ஆசிகள் வழங்குக</p>
+    </article></div>
+  </main>
+  <script>
+    const invitationIcons={
+      ganesha:'<svg viewBox="0 0 64 64" role="img" aria-label="Ganesha" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M25 17c-2-5 1-10 7-13 6 3 9 8 7 13M20 20c-8-5-14-1-13 8 1 7 7 11 15 9M44 20c8-5 14-1 13 8-1 7-7 11-15 9M22 20c2-6 6-8 10-8s8 2 10 8v11c0 8-4 13-10 13s-10-5-10-13zM32 44v9c0 5 9 5 11 0 1-3-1-5-5-5M27 28h.1M37 28h.1M32 21v4M29 40c2 2 4 2 6 0M27 13l-3-5M37 13l3-5M16 45l-5 5M48 45l5 5M25 49l-2 8M39 49l2 8"/><path d="M27 5h10M29 2h6"/></svg>',
+      calendar:'<svg viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="9" width="36" height="33" rx="4"/><path d="M15 5v9M33 5v9M7 18h34M15 25h5v5h-5zM27 25h5v5h-5zM15 34h5v4h-5zM27 34h5v4h-5z"/></svg>',
+      location:'<svg viewBox="0 0 48 48" aria-hidden="true" fill="currentColor"><path d="M24 3C14.6 3 7 10.6 7 20c0 12.3 17 25 17 25s17-12.7 17-25C41 10.6 33.4 3 24 3zm0 23a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/></svg>',
+      clock:'<svg viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="19"/><path d="M24 12v13l9 7"/><path d="M24 2v4M24 42v4M2 24h4M42 24h4"/></svg>'
+    };
+    document.querySelector('.ganesha').innerHTML='<img src="assets/ganesha-transparent.png" alt="">';
+    const detailIcons=document.querySelectorAll('.details .icon');
+    [invitationIcons.calendar,invitationIcons.location,invitationIcons.clock].forEach((icon,index)=>detailIcons[index].innerHTML=icon);
+    const translations={
+      ta:{blessing:'ஸ்ரீ அஜ்ஜியம்மன் துணை',invocation:'ஸ்ரீ அஜ்ஜியம்மன் துணை',title:'கிரகப்பிரவேசம்',intro:'இறைவன் அருளால் இனிதே தொடங்கும்<br>அத்தியாயம், உங்கள் அன்பு வருகையால்<br>அழகாகட்டும் எங்கள் இல்ல விழா.',homeLabel:'எங்கள் இல்லம்',home:'ஜெயம் இல்லம்',dateLabel:'நாள் & தேதி',date:'ஐப்பசி 27 ஆம் நாள்<br><small>13 நவம்பர் 2026</small>',placeLabel:'இடம்',place:'பூளவாடி',timeLabel:'காலை',time:'4.00 மணிக்கு மேல்<br><small>6.00 மணிக்குள்.</small>',welcome:'தங்கள் நல்வரவை நாடும்',hosts:'சிவசுப்பிரமணியன் - ஜெயலட்சுமி<span>கௌசிக்</span>',map:'வழி காண்க',calendar:'＋ நாட்காட்டியில் சேர்க்க',foot:'அன்புடன் வருக · ஆசிகள் வழங்குக',countdown:(d,h,m)=>`விழாவிற்கு இன்னும் <b>${d}</b> நாட்கள் · <b>${h}</b> மணி · <b>${m}</b> நிமிடம்`,coverTitle:'ஜெயம் இல்லம்',coverSubtitle:'கிரகப்பிரவேசம் · Housewarming',tapHint:'உங்கள் அன்பான வருகைக்காக காத்திருக்கிறோம்<br>We warmly await your presence',tapOpen:'அழைப்பிதழை திறக்க · Tap to open'},
+      en:{blessing:'With the blessings of Sri Ajjiyamman',invocation:'With the blessings of Sri Ajjiyamman',title:'Housewarming Ceremony',intro:'With the grace of God, a new chapter begins.<br>Your loving presence will make<br>our housewarming celebration complete.',homeLabel:'OUR NEW HOME',home:'Jayam Illam',dateLabel:'DAY & DATE',date:'Aippasi 27<br><small>Friday, 13 November 2026</small>',placeLabel:'LOCATION',place:'Poolavadi',timeLabel:'MORNING',time:'From 4:00 AM<br><small>until 6:00 AM</small>',welcome:'With warm regards from',hosts:'Sivasubramanian - Jayalakshmi<span>Kaushik</span>',map:'Get directions',calendar:'＋ Add to calendar',foot:'Please join us and bless our new beginning',countdown:(d,h,m)=>`Celebration in <b>${d}</b> days · <b>${h}</b> hrs · <b>${m}</b> min`,coverTitle:'Jayam Illam',coverSubtitle:'Housewarming Ceremony',tapHint:'உங்கள் அன்பான வருகைக்காக காத்திருக்கிறோம்<br>We warmly await your presence',tapOpen:'Tap to open invitation'}
+    };
+    let currentLanguage='ta';
+    function setLanguage(language){
+      currentLanguage=language;const t=translations[language];document.documentElement.lang=language;document.getElementById('countdown').dataset.language=language;
+      const invocation=document.querySelector('.card .invocation');
+      invocation.innerHTML=language==='ta'?'<span class="shri">ஸ்ரீ</span><span>அஜ்ஜியம்மன் துணை</span>':t.invocation;
+      document.querySelector('.card h1').textContent=t.title;
+      document.querySelector('.card .subtitle').innerHTML=t.intro;
+      document.querySelector('.nameplate small').textContent=t.homeLabel;
+      document.querySelector('.nameplate strong').textContent=t.home;
+      const labels=document.querySelectorAll('.details .detail-label');[t.dateLabel,t.placeLabel,t.timeLabel].forEach((value,i)=>labels[i].textContent=value);
+      const values=document.querySelectorAll('.details .detail-value');[t.date,t.place,t.time].forEach((value,i)=>values[i].innerHTML=value);
+      document.querySelector('.welcome').textContent=t.welcome;
+      document.querySelector('.hosts').innerHTML=t.hosts;
+      document.getElementById('map-link').innerHTML=`<svg viewBox="0 0 48 48" aria-hidden="true" fill="currentColor" style="width:22px;height:22px;flex:none"><path d="M24 3C14.6 3 7 10.6 7 20c0 12.3 17 25 17 25s17-12.7 17-25C41 10.6 33.4 3 24 3zm0 23a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/></svg><span>${t.map}</span>`;
+      document.getElementById('calendar').textContent=t.calendar;
+      document.querySelector('.foot').textContent=t.foot;
+      document.querySelector('.cover-kicker').textContent=t.blessing;
+      document.querySelector('.cover-title').textContent=t.coverTitle;
+      document.querySelector('.cover-subtitle').textContent=t.coverSubtitle;
+      document.querySelector('.cover-hint').innerHTML=t.tapHint;
+      document.getElementById('open-invitation').textContent=t.tapOpen;
+      document.querySelectorAll('[data-language-toggle]').forEach(button=>{
+        button.textContent=language==='ta'?'Tap to English':'Tap to Tamil';
+        button.setAttribute('aria-label',language==='ta'?'Switch invitation to English':'Switch invitation to Tamil');
+      });
+      updateCountdown();
+    }
+    document.querySelectorAll('[data-language-toggle]').forEach(button=>button.addEventListener('click',()=>setLanguage(currentLanguage==='ta'?'en':'ta')));
+    document.getElementById('open-invitation').addEventListener('click',()=>{
+      const cover=document.getElementById('cover-screen');
+      const opening=document.getElementById('opening-scene');
+      const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
+      document.getElementById('open-invitation').disabled=true;
+      cover.classList.add('is-opening');
+      if(reducedMotion){document.body.classList.add('invite-open');cover.remove();opening.remove();return}
+      document.body.classList.add('opening-active');
+      window.setTimeout(()=>{
+        document.body.classList.add('invite-open');
+        document.body.classList.remove('opening-active');
+        opening.classList.add('is-finished');
+        cover.remove();
+        window.setTimeout(()=>opening.remove(),700);
+      },3100);
+    });
+    const petalField=document.getElementById('petal-field');
+    if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
+      const petalCount=matchMedia('(max-width: 600px)').matches?8:18;
+      for(let i=0;i<petalCount;i++){
+        const petal=document.createElement('i');petal.className='petal';
+        petal.style.left=`${Math.random()*100}%`;
+        petal.style.setProperty('--fall-time',`${13+Math.random()*13}s`);
+        petal.style.setProperty('--delay',`${-Math.random()*24}s`);
+        petal.style.setProperty('--drift',`${Math.random()*150-75}px`);
+        petalField.append(petal);
+      }
+    }
+    const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
+      if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target)}
+    }),{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(item=>revealObserver.observe(item));
+    const countdown=document.getElementById('countdown');
+    function updateCountdown(){
+      const language=document.documentElement.lang==='en'?'en':'ta';
+      const left=new Date('2026-11-13T04:00:00+05:30').getTime()-Date.now();
+      if(left<=0){countdown.textContent=language==='ta'?'விழாவிற்கு அன்புடன் வரவேற்கிறோம்!':'Welcome to the celebration!';return}
+      const days=Math.floor(left/86400000),hours=Math.floor(left%86400000/3600000),minutes=Math.floor(left%3600000/60000);
+      countdown.innerHTML=translations[language].countdown(days,hours,minutes);
+    }
+    setLanguage('ta');updateCountdown();setInterval(updateCountdown,60000);
+    document.getElementById('calendar').addEventListener('click',()=>{
+      const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Jayam Illam//Tamil Invite//EN','BEGIN:VEVENT','UID:jayam-illam-20261113@invite','DTSTAMP:20261028T000000Z','DTSTART:20261112T223000Z','DTEND:20261113T003000Z',`SUMMARY:${currentLanguage==='ta'?'ஜெயம் இல்லம் கிரகப்பிரவேசம்':'Jayam Illam Housewarming'}`,`LOCATION:${currentLanguage==='ta'?'பூளவாடி':'Poolavadi'}`,'DESCRIPTION:ஜெயம் இல்லம் கிரகப்பிரவேச விழா — அனைவரும் அன்புடன் வருக.','END:VEVENT','END:VCALENDAR'].join('\r\n');
+      const blob=new Blob([ics],{type:'text/calendar;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='jayam-illam-housewarming.ics';a.click();URL.revokeObjectURL(url);
+    });
+  </script>
+</body>
+</html>
