@@ -18,6 +18,8 @@
     .flowers{position:absolute;right:-30px;top:155px;color:#fdfcf1;font-size:40px;line-height:1.4;text-shadow:0 2px 9px #8f9b58;opacity:.95;pointer-events:none}
     .border{position:relative;z-index:1;max-width:780px;margin:auto;border:1px solid #c8a34c;padding:8px;background:#fffdf08a;box-shadow:0 22px 60px #51451d18}
     .card{position:relative;border:1px solid #d2b45e;padding:35px clamp(18px,6vw,58px) 42px;text-align:center;background:linear-gradient(180deg,#fffef7ed,#fffdf3f5);overflow:hidden}
+    .invitation-house{position:absolute;z-index:0;right:0;bottom:0;width:min(42%,300px);height:30%;object-fit:contain;object-position:right bottom;pointer-events:none;filter:drop-shadow(0 4px 7px #183a2422);opacity:.92}
+    .card>:not(.invitation-house){position:relative;z-index:1}
     .card:before{content:"❧";position:absolute;left:-10px;top:44%;font-size:40px;color:#749b49;transform:rotate(90deg)}.card:after{content:"❧";position:absolute;right:-10px;top:44%;font-size:40px;color:#749b49;transform:rotate(-90deg)}
     .ganesha{color:var(--gold);font-size:45px;line-height:1;margin-bottom:12px}
     .ganesha img{width:48px;height:48px;object-fit:contain;display:block;margin:auto}
@@ -33,7 +35,7 @@
     .welcome{display:inline-block;background:var(--deep);color:#fff8d9;border:2px solid var(--gold);border-radius:999px;padding:8px 25px;margin:10px auto 8px;font-size:19px;font-weight:700;box-shadow:0 0 0 3px #fff8d9}
     .hosts{font-size:clamp(18px,4vw,25px);font-weight:800;color:var(--red);line-height:1.75;margin:10px 0 0}.hosts span{display:block;color:var(--green)}
     .actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:24px}.button{font:700 15px "Noto Serif Tamil",serif;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 17px;border-radius:999px;text-decoration:none;border:1px solid var(--gold);color:var(--deep);background:#fff9e4;transition:transform .2s,background .2s}.button:hover{transform:translateY(-2px);background:#f8edc5}.button.primary{background:var(--deep);color:#fff7d9}.foot{color:#88743a;font-size:13px;margin:26px 0 0}
-    @media(max-width:520px){.scene{padding:12px 9px 25px}.scene:before,.scene:after{width:130px;height:290px;opacity:.75}.scene:before{left:-89px}.scene:after{right:-90px}.card{padding:25px 14px 30px}.flowers{font-size:28px;right:-18px}.detail{grid-template-columns:48px 1fr;gap:8px}.icon{font-size:29px}.card:before,.card:after{font-size:28px}}
+    @media(max-width:520px){.scene{padding:12px 9px 25px}.scene:before,.scene:after{width:130px;height:290px;opacity:.75}.scene:before{left:-89px}.scene:after{right:-90px}.card{padding:25px 14px 30px}.invitation-house{width:40%;height:25%;right:0;bottom:0}.flowers{font-size:28px;right:-18px}.detail{grid-template-columns:48px 1fr;gap:8px}.icon{font-size:29px}.card:before,.card:after{font-size:28px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}}
     /* Invitation motion: gentle petals, warm highlights, and a soft entrance. */
     .petal-field{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:3}
@@ -241,6 +243,7 @@
   <main class="scene">
     <div class="flowers" aria-hidden="true">✿<br>❀<br>✿<br>❀</div>
     <div class="border"><article class="card">
+      <img class="invitation-house" src="assets/house-cutout.png" alt="" aria-hidden="true">
       <button class="lang-toggle" type="button" data-language-toggle>English</button>
       <div class="ganesha" aria-hidden="true">ॐ</div>
       <p class="invocation">ஸ்ரீ அஜ்ஜியம்மன் துணை</p>
