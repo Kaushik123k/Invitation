@@ -2,6 +2,6 @@
 
 Mobile-first bilingual invitation for Jayam Illam.
 
-## GitHub Pages
+## Live invitation
 
-In the repository settings, open **Pages** and choose **GitHub Actions** as the build and deployment source. The workflow in `.github/workflows/pages.yml` then publishes the invitation whenever a commit is pushed to `main`.
+The invitation is published at <https://kaushik123k.github.io/Invitation/>. The workflow in `.github/workflows/pages.yml` republishes it whenever a commit is pushed to `main`.
