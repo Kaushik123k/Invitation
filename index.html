@@ -698,14 +698,13 @@
       document.querySelectorAll('.reveal').forEach(item=>revealObserver.observe(item));
     }else document.querySelectorAll('.reveal').forEach(item=>item.classList.add('visible'));
     const countdown=document.getElementById('countdown');
-    function updateCountdown(){
-      const language=document.documentElement.lang==='en'?'en':'ta';
+    function updateCountdown(language=currentLanguage){
       const left=new Date('2026-11-13T04:00:00+05:30').getTime()-Date.now();
       if(left<=0){countdown.textContent=language==='ta'?'விழாவிற்கு அன்புடன் வரவேற்கிறோம்!':'Welcome to the celebration!';return}
       const days=Math.floor(left/86400000),hours=Math.floor(left%86400000/3600000),minutes=Math.floor(left%3600000/60000);
       countdown.innerHTML=translations[language].countdown(days,hours,minutes);
     }
-    setLanguage('ta');updateCountdown();setInterval(updateCountdown,60000);
+    setLanguage('ta');setInterval(()=>updateCountdown(currentLanguage),60000);
     document.getElementById('calendar').addEventListener('click',()=>{
       const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Jayam Illam//Tamil Invite//EN','BEGIN:VEVENT','UID:jayam-illam-20261113@invite','DTSTAMP:20261028T000000Z','DTSTART:20261112T223000Z','DTEND:20261113T003000Z',`SUMMARY:${currentLanguage==='ta'?'ஜெயம் இல்லம் கிரகப்பிரவேசம்':'Jayam Illam Housewarming'}`,`LOCATION:${currentLanguage==='ta'?'பூளவாடி, M.G.R Nagar':'Poolavadi, M.G.R Nagar'}`,'DESCRIPTION:ஜெயம் இல்லம் கிரகப்பிரவேச விழா — அனைவரும் அன்புடன் வருக.','END:VEVENT','END:VCALENDAR'].join('\r\n');
       const blob=new Blob([ics],{type:'text/calendar;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='jayam-illam-housewarming.ics';a.click();URL.revokeObjectURL(url);
