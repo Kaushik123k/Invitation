@@ -414,7 +414,14 @@
     .cover-toran{position:absolute;top:4px;left:50%;width:78%;height:32px;transform:translateX(-50%)}
     .invitation-toran{position:absolute;top:7px;left:50%;width:min(320px,76%);height:35px;transform:translateX(-50%)}
     .rangoli{position:absolute;z-index:-1;left:50%;bottom:-110px;width:min(290px,72vw);aspect-ratio:1;transform:translateX(-50%);border:1px solid #d0ae69;border-radius:50%;opacity:.36;background:repeating-conic-gradient(from 0deg,#d3b16d38 0 1deg,transparent 1deg 18deg),radial-gradient(circle,transparent 0 22%,#d1b36b55 22.5% 23%,transparent 23.5% 37%,#d1b36b4d 37.5% 38%,transparent 38.5% 56%,#d1b36b55 56.5% 57%,transparent 57.5%)}
+    .traditional-art{position:absolute;z-index:0;right:0;bottom:0;left:0;height:245px;pointer-events:none;opacity:.78}
+    .lamp-art{position:absolute;left:0;bottom:0;width:clamp(112px,17vw,160px);height:100%;filter:drop-shadow(0 3px 6px #54361c22)}
+    .house-art{position:absolute;right:0;bottom:0;width:clamp(205px,28vw,290px);height:190px;filter:drop-shadow(0 3px 7px #4b302222)}
+    .card .invocation,.card .ganesha,.card .roof,.card h1,.card .subtitle,.card>.nameplate,.card>.details,.card>.countdown,.card>.hosts-block,.card>.actions,.card>.foot{position:relative;z-index:1}
+    .card>.lang-toggle{z-index:3}
     @media(max-width:640px){.rangoli{bottom:-80px;width:min(230px,72vw)}.cover-toran{height:28px}.invitation-toran{top:5px;height:28px}.card h1{text-shadow:0 1px #dfcfb0}}
+    @media(max-width:640px){.traditional-art{height:145px;opacity:.43}.lamp-art{width:84px}.house-art{width:146px;height:106px}}
+    @media(max-width:640px) and (max-height:700px){.traditional-art{height:122px;opacity:.35}.lamp-art{width:72px}.house-art{width:128px;height:93px}}
   </style>
 </head>
 <body>
@@ -466,6 +473,63 @@
     <div class="flowers" aria-hidden="true">✿<br>❀<br>✿<br>❀</div>
     <div class="border"><article class="card">
       <button class="lang-toggle" type="button" data-language-toggle>English</button>
+      <div class="traditional-art" aria-hidden="true">
+        <svg class="lamp-art" viewBox="0 0 210 360">
+          <defs>
+            <linearGradient id="brass" x1="0" y1="0" x2="1" y2=".2"><stop stop-color="#8e5d24"/><stop offset=".28" stop-color="#f1cf75"/><stop offset=".52" stop-color="#a9752b"/><stop offset=".76" stop-color="#f6d985"/><stop offset="1" stop-color="#956322"/></linearGradient>
+            <linearGradient id="flame" x1="0" y1="1" x2="0" y2="0"><stop stop-color="#d76634"/><stop offset=".55" stop-color="#f5b84b"/><stop offset="1" stop-color="#fff1a9"/></linearGradient>
+          </defs>
+          <path d="M87 61c-17-15-4-34 5-49 3 12 17 21 12 36-2 6-7 10-17 13Z" fill="url(#flame)"/>
+          <path d="M94 58c-7-8 0-17 3-23 5 8 8 15 2 22Z" fill="#fff3b6"/>
+          <path d="M91 63V50" stroke="#65451f" stroke-width="4" stroke-linecap="round"/>
+          <path d="M81 67q13-9 26 0l-4 8H85Z" fill="url(#brass)" stroke="#a7762f" stroke-width="2"/>
+          <ellipse cx="94" cy="82" rx="61" ry="12" fill="url(#brass)" stroke="#936528" stroke-width="2"/>
+          <path d="M34 82q7 29 60 34 53-5 60-34" fill="url(#brass)" stroke="#936528" stroke-width="2"/>
+          <path d="M49 91q45 17 90 0" fill="none" stroke="#ffe6a0" stroke-width="2" opacity=".8"/>
+          <path d="M83 116h22l-4 18 10 10-7 10H84l-7-10 10-10Z" fill="url(#brass)" stroke="#936528" stroke-width="2"/>
+          <path d="M87 153h15l-2 27 9 13-7 10H82l-7-10 10-13Z" fill="url(#brass)" stroke="#936528" stroke-width="2"/>
+          <path d="M78 187q13 8 32 0M77 200q17 8 35 0M80 214h29l-4 20 12 12-8 11H79l-8-11 12-12Z" fill="url(#brass)" stroke="#936528" stroke-width="2"/>
+          <path d="M82 258h23l3 26 13 10-6 12H71l-6-12 14-10Z" fill="url(#brass)" stroke="#936528" stroke-width="2"/>
+          <path d="M62 301q32 12 64 0l9 12q-39 18-82 0Z" fill="url(#brass)" stroke="#936528" stroke-width="2"/>
+          <ellipse cx="93" cy="326" rx="47" ry="10" fill="url(#brass)" stroke="#936528" stroke-width="2"/>
+          <path d="M50 326q6 12 43 14 38-2 44-14" fill="url(#brass)" stroke="#936528" stroke-width="2"/>
+          <path d="M74 335q19 7 38 0l10 10H64Z" fill="url(#brass)" stroke="#936528" stroke-width="2"/>
+          <g transform="translate(126 299) rotate(-12)">
+            <path d="M5 24Q12 0 42 4q26 5 28 31L56 54H18Z" fill="#70452d" stroke="#4b3024" stroke-width="3"/>
+            <path d="M10 30Q16 9 41 12q21 3 24 21L53 46H21Z" fill="#fff4db" stroke="#d8c49d" stroke-width="4"/>
+            <path d="M17 31q18-10 38 0" fill="none" stroke="#d5a967" stroke-width="2"/>
+          </g>
+          <g transform="translate(150 320) rotate(18)">
+            <path d="M2 14Q8 0 25 2q18 3 19 20L34 38H11Z" fill="#795036" stroke="#513421" stroke-width="2"/>
+            <path d="M7 19Q12 7 25 9q12 2 14 13L31 31H13Z" fill="#fff4db" stroke="#d8c49d" stroke-width="3"/>
+          </g>
+        </svg>
+        <svg class="house-art" viewBox="0 0 320 220">
+          <defs>
+            <linearGradient id="houseWall" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff9e9"/><stop offset="1" stop-color="#dfcba8"/></linearGradient>
+            <linearGradient id="terracotta" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ad5942"/><stop offset="1" stop-color="#6e302d"/></linearGradient>
+            <linearGradient id="windowLight" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff1b0"/><stop offset="1" stop-color="#d9943c"/></linearGradient>
+          </defs>
+          <g fill="none" stroke="#586343" stroke-width="3" stroke-linecap="round">
+            <path d="M282 139Q293 72 285 28M285 47q-29-31-54-28 19 26 51 35M286 56q18-39 39-43-7 30-35 49M284 68q-33-15-47-8 20 21 45 19M286 78q22-23 38-23-10 24-38 31"/>
+          </g>
+          <path d="M27 94 156 21l134 75-12 14-122-64L41 111Z" fill="url(#terracotta)" stroke="#68332c" stroke-width="4"/>
+          <path d="m42 103 114-61 119 64M53 115l104-56 108 59M68 126l89-47 92 48" fill="none" stroke="#d28b61" stroke-width="3"/>
+          <path d="M53 107h211v90H53Z" fill="url(#houseWall)" stroke="#9a784d" stroke-width="3"/>
+          <path d="M39 192h239v11H39Z" fill="#b49a6c" stroke="#826745" stroke-width="2"/>
+          <path d="M132 197v-59q0-20 22-20t22 20v59Z" fill="#63362d" stroke="#8f6844" stroke-width="3"/>
+          <circle cx="164" cy="169" r="2.8" fill="#f2d17d"/>
+          <g stroke="#8c6746" stroke-width="3">
+            <rect x="69" y="131" width="42" height="40" rx="2" fill="url(#windowLight)"/>
+            <path d="M90 131v40M69 151h42"/>
+            <rect x="206" y="131" width="42" height="40" rx="2" fill="url(#windowLight)"/>
+            <path d="M227 131v40M206 151h42"/>
+          </g>
+          <path d="M117 204h72v6h-72Zm-16 7h105v6H101Zm-16 7h137v6H85Z" fill="#b4a084" stroke="#85745e" stroke-width="1.5"/>
+          <path d="M13 215h294" stroke="#b19461" stroke-width="3" stroke-linecap="round"/>
+          <path d="M45 204q-17-13-25-3 8 14 25 11m230-8q20-16 28-3-8 13-28 11" fill="#6f8151"/>
+        </svg>
+      </div>
       <header class="invitation-header">
         <svg class="toran invitation-toran" viewBox="0 0 360 54" aria-hidden="true">
           <path class="toran-cord" d="M12 4 Q180 47 348 4"/>
