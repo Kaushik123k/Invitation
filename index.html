@@ -480,6 +480,9 @@
     .button.primary{background:linear-gradient(135deg,#55202e,#6a2b38);border-color:#55202e;box-shadow:0 5px 14px #4c1e2c24}
     .button.primary:hover{background:#702b3b}
     .lang-toggle{min-height:40px;padding:8px 14px;box-shadow:0 3px 9px #49332610}
+    .language-label{display:none}
+    html[lang="ta"] .language-label--english{display:inline}
+    html[lang="en"] .language-label--tamil{display:inline}
     .cover-button:focus-visible,.button:focus-visible,.lang-toggle:focus-visible{outline:3px solid #c79d43;outline-offset:3px}
     .flowers{display:none}
     .card{animation:none}
@@ -592,7 +595,7 @@
   <div class="cover-screen" id="cover-screen">
     <div class="rangoli" aria-hidden="true"></div>
     <section class="cover-card" aria-label="Jayam Illam invitation cover">
-      <button class="lang-toggle" type="button" data-language-toggle>English</button>
+      <button class="lang-toggle" type="button" data-language-toggle><span class="language-label language-label--english">Tap to English</span><span class="language-label language-label--tamil">Tap to Tamil</span></button>
       <svg class="toran cover-toran" viewBox="0 0 360 54" aria-hidden="true">
         <path class="toran-cord" d="M12 4 Q180 47 348 4"/>
         <g class="toran-leaves">
@@ -636,7 +639,7 @@
   <main class="scene">
     <div class="flowers" aria-hidden="true">✿<br>❀<br>✿<br>❀</div>
     <div class="border"><article class="card">
-      <button class="lang-toggle" type="button" data-language-toggle>English</button>
+      <button class="lang-toggle" type="button" data-language-toggle><span class="language-label language-label--english">Tap to English</span><span class="language-label language-label--tamil">Tap to Tamil</span></button>
       <img class="traditional-art" src="assets/housewarming-decor.png" alt="" aria-hidden="true">
       <img class="botanical-decor leaf-decor" src="assets/leaf-border.png" alt="" aria-hidden="true">
       <img class="botanical-decor flower-decor" src="assets/flower-border.png" alt="" aria-hidden="true">
@@ -706,6 +709,11 @@
     let currentLanguage='ta';
     function setLanguage(language){
       currentLanguage=language;const t=translations[language];document.documentElement.lang=language;updateCountdown(language);
+      document.querySelector('.details .detail:first-child .detail-value').innerHTML=t.date;
+      document.querySelectorAll('[data-language-toggle]').forEach(button=>{
+        button.dataset.activeLanguage=language;
+        button.setAttribute('aria-label',language==='ta'?'Switch invitation to English':'Switch invitation to Tamil');
+      });
       const invocation=document.querySelector('.card .invocation');
       invocation.innerHTML=language==='ta'?'<span class="shri">ஸ்ரீ</span><span>அஜ்ஜியம்மன் துணை</span>':t.invocation;
       document.querySelector('.card h1').textContent=t.title;
@@ -727,12 +735,6 @@
       document.querySelector('.cover-subtitle').textContent=t.coverSubtitle;
       document.querySelector('.cover-hint').innerHTML=t.tapHint;
       document.getElementById('open-invitation').textContent=t.tapOpen;
-      document.querySelectorAll('[data-language-toggle]').forEach(button=>{
-        const nextLanguageLabel=language==='ta'?'Tap to English':'Tap to Tamil';
-        button.dataset.activeLanguage=language;
-        button.textContent=nextLanguageLabel;
-        button.setAttribute('aria-label',language==='ta'?'Switch invitation to English':'Switch invitation to Tamil');
-      });
     }
     document.querySelectorAll('[data-language-toggle]').forEach(button=>button.addEventListener('click',()=>setLanguage(button.dataset.activeLanguage==='ta'?'en':'ta')));
     document.getElementById('open-invitation').addEventListener('click',()=>{
