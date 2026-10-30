@@ -711,7 +711,6 @@
       currentLanguage=language;const t=translations[language];document.documentElement.lang=language;updateCountdown(language);
       document.querySelector('.details .detail:first-child .detail-value').innerHTML=t.date;
       document.querySelectorAll('[data-language-toggle]').forEach(button=>{
-        button.dataset.activeLanguage=language;
         button.setAttribute('aria-label',language==='ta'?'Switch invitation to English':'Switch invitation to Tamil');
       });
       const invocation=document.querySelector('.card .invocation');
@@ -736,8 +735,9 @@
       document.querySelector('.cover-hint').innerHTML=t.tapHint;
       document.getElementById('open-invitation').textContent=t.tapOpen;
     }
-    document.querySelectorAll('[data-language-toggle]').forEach(button=>button.addEventListener('click',()=>setLanguage(button.dataset.activeLanguage==='ta'?'en':'ta')));
+    document.querySelectorAll('[data-language-toggle]').forEach(button=>button.addEventListener('click',()=>setLanguage(document.documentElement.lang==='en'?'ta':'en')));
     document.getElementById('open-invitation').addEventListener('click',()=>{
+      setLanguage(document.documentElement.lang==='en'?'en':'ta');
       const cover=document.getElementById('cover-screen');
       const opening=document.getElementById('opening-scene');
       const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
