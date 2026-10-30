@@ -539,6 +539,7 @@
     .details{gap:14px}
     .detail{border-color:#e0d1b7;background:linear-gradient(145deg,#fffefa 0,#fffaf2 56%,#f5ebdf 100%);box-shadow:0 7px 22px #49332612,inset 0 1px #fff}
     .detail>.icon{background:linear-gradient(145deg,#fff6e6,#eadbc2);box-shadow:inset 0 0 0 1px #ddc89e,0 3px 9px #6b452218;color:#886438}
+    .date-emphasis{display:block;color:#4a1d29;font-size:clamp(18px,2.35vw,24px);font-weight:700;line-height:1.18;text-wrap:balance}
     .countdown{border-color:#cdb77f;background:linear-gradient(110deg,#f2e3ca,#fffaf1 48%,#efe0c5);box-shadow:0 7px 20px #62452114,inset 0 1px #fff;color:#704f42}
     .countdown b{color:#4a1d29}
     .hosts-block{padding-top:8px}
@@ -572,6 +573,7 @@
       .details{border-color:#d9c59e;background:linear-gradient(145deg,#fffdf8,#f6ecdf);box-shadow:0 6px 18px #49332613,inset 0 1px #fff}
       .detail{background:transparent}
       .detail>.icon{background:linear-gradient(145deg,#fff6e6,#eadbc2);box-shadow:inset 0 0 0 1px #ddc89e,0 2px 7px #6b452213}
+      .date-emphasis{font-size:clamp(15px,4.3vw,18px);line-height:1.2}
       .countdown{margin:5px auto 6px;padding:7px 10px}
       .cover-card{padding:28px 20px 26px}
       .cover-glyph{width:58px;height:58px;margin:4px auto 8px}.cover-glyph img{width:45px;height:45px}
@@ -691,7 +693,7 @@
     [invitationIcons.calendar,invitationIcons.location,invitationIcons.clock].forEach((icon,index)=>detailIcons[index].innerHTML=icon);
     const translations={
       ta:{blessing:'ஸ்ரீ அஜ்ஜியம்மன் துணை',invocation:'ஸ்ரீ அஜ்ஜியம்மன் துணை',title:'கிரகப்பிரவேசம்',intro:'இறைவன் அருளால் இனிதே தொடங்கும்<br>அத்தியாயம், உங்கள் அன்பு வருகையால்<br>அழகாகட்டும் எங்கள் இல்ல விழா.',homeLabel:'எங்கள் இல்லம்',home:'ஜெயம் இல்லம்',dateLabel:'நாள் & தேதி',date:'ஐப்பசி 27 ஆம் நாள்<br><small>13 நவம்பர் 2026</small>',placeLabel:'இடம்',place:'பூளவாடி, M.G.R Nagar',timeLabel:'காலை',time:'4.00 மணிக்கு மேல்<br><small>6.00 மணிக்குள்.</small>',welcome:'தங்கள் நல்வரவை நாடும்',hosts:'சிவசுப்பிரமணியன் - ஜெயலட்சுமி<span>கௌசிக்</span>',map:'வழி காண்க',calendar:'＋ நாட்காட்டியில் சேர்க்க',foot:'அன்புடன் வருக · ஆசிகள் வழங்குக',countdown:(d,h,m)=>`விழாவிற்கு இன்னும் <b>${d}</b> நாட்கள் · <b>${h}</b> மணி · <b>${m}</b> நிமிடம்`,coverTitle:'ஜெயம் இல்லம்',coverSubtitle:'கிரகப்பிரவேசம் · Housewarming',tapHint:'உங்கள் அன்பான வருகைக்காக காத்திருக்கிறோம்<br>We warmly await your presence',tapOpen:'அழைப்பிதழை திறக்க · Tap to open'},
-      en:{blessing:'With the blessings of Sri Ajjiyamman',invocation:'With the blessings of Sri Ajjiyamman',title:'Housewarming Ceremony',intro:'With the grace of God, a new chapter begins.<br>Your loving presence will make<br>our housewarming celebration complete.',homeLabel:'OUR NEW HOME',home:'Jayam Illam',dateLabel:'DAY & DATE',date:'Aippasi 27<br><small>Friday, 13 November 2026</small>',placeLabel:'LOCATION',place:'Poolavadi, M.G.R Nagar',timeLabel:'MORNING',time:'From 4:00 AM<br><small>until 6:00 AM</small>',welcome:'With warm regards from',hosts:'Sivasubramanian - Jayalakshmi<span>Kaushik</span>',map:'Get directions',calendar:'＋ Add to calendar',foot:'Please join us and bless our new beginning',countdown:(d,h,m)=>`Celebration in <b>${d}</b> days · <b>${h}</b> hrs · <b>${m}</b> min`,coverTitle:'Jayam Illam',coverSubtitle:'Housewarming Ceremony',tapHint:'உங்கள் அன்பான வருகைக்காக காத்திருக்கிறோம்<br>We warmly await your presence',tapOpen:'Tap to open invitation'}
+      en:{blessing:'With the blessings of Sri Ajjiyamman',invocation:'With the blessings of Sri Ajjiyamman',title:'Housewarming Ceremony',intro:'With the grace of God, a new chapter begins.<br>Your loving presence will make<br>our housewarming celebration complete.',homeLabel:'OUR NEW HOME',home:'Jayam Illam',dateLabel:'DAY & DATE',date:'<strong class="date-emphasis">Friday, 13 November 2026</strong>',placeLabel:'LOCATION',place:'Poolavadi, M.G.R Nagar',timeLabel:'MORNING',time:'From 4:00 AM<br><small>until 6:00 AM</small>',welcome:'With warm regards from',hosts:'Sivasubramanian - Jayalakshmi<span>Kaushik</span>',map:'Get directions',calendar:'＋ Add to calendar',foot:'Please join us and bless our new beginning',countdown:(d,h,m)=>`Celebration in <b>${d}</b> days · <b>${h}</b> hrs · <b>${m}</b> min`,coverTitle:'Jayam Illam',coverSubtitle:'Housewarming Ceremony',tapHint:'உங்கள் அன்பான வருகைக்காக காத்திருக்கிறோம்<br>We warmly await your presence',tapOpen:'Tap to open invitation'}
     };
     const countdown=document.getElementById('countdown');
     function updateCountdown(language=document.documentElement.lang==='en'?'en':'ta'){
@@ -726,11 +728,13 @@
       document.querySelector('.cover-hint').innerHTML=t.tapHint;
       document.getElementById('open-invitation').textContent=t.tapOpen;
       document.querySelectorAll('[data-language-toggle]').forEach(button=>{
-        button.textContent=language==='ta'?'Tap to English':'Tap to Tamil';
+        const nextLanguageLabel=language==='ta'?'Tap to English':'Tap to Tamil';
+        button.dataset.activeLanguage=language;
+        button.textContent=nextLanguageLabel;
         button.setAttribute('aria-label',language==='ta'?'Switch invitation to English':'Switch invitation to Tamil');
       });
     }
-    document.querySelectorAll('[data-language-toggle]').forEach(button=>button.addEventListener('click',()=>setLanguage(document.documentElement.lang==='ta'?'en':'ta')));
+    document.querySelectorAll('[data-language-toggle]').forEach(button=>button.addEventListener('click',()=>setLanguage(button.dataset.activeLanguage==='ta'?'en':'ta')));
     document.getElementById('open-invitation').addEventListener('click',()=>{
       const cover=document.getElementById('cover-screen');
       const opening=document.getElementById('opening-scene');
